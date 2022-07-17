@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:movie/ui/home/pages/home_page.dart';
 import 'package:movie/utils/app_bloc_observer.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -19,9 +20,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Info Movies',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: const Color(0xFFC5F5CB),
+        )
+
       ),
-      home: SizedBox(),
+      home: HomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
